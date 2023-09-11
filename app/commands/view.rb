@@ -1,3 +1,5 @@
+require 'commands/command'
+
 class View < Command
   COMMAND = 'view'
   ARGS = ''

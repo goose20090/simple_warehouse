@@ -1,0 +1,10 @@
+class View < Command
+  COMMAND = 'view'
+  ARGS = ''
+  HELP = "Output a visualisation of the warehouse, its current items and their location"
+
+
+  def execute _args
+    warehouse.layout.reverse.map(&:join).join("\n")
+  end
+end

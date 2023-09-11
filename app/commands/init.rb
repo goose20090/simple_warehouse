@@ -6,6 +6,8 @@ class Init < Command
   HELP = 'Initialises the application as an empty W x H warehouse.'
 
   def execute(args)
-    "Not implemented"
+    width, height = args.map(&:to_i)
+    warehouse.init(width, height)
+    "Warehouse initialised with dimensions #{width}x#{height}"
   end
 end

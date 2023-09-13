@@ -10,16 +10,22 @@ I thought the deliverables were laid out in a way that it made sense to go throu
 
 ### Deliverable 1- Warehouse manager can initialise and visualise a warehouse
 
-2 commands were specified here: init and view. It made sense to start with init.
+- 2 commands were specified here: init and view. It made sense to start with init.
 
-### Init
+- I modified the warehouse class to initialise with 3 instance variables: width (as 0), height (as 0) and layout (as an empty array).
 
-I modified the warehouse class to initialise with 3 instance variables: width (as 0), height (as 0) and layout (as an empty array).
+- I then wrote a separate init method to accept the width and height as arguments, assign them to their respective instance variables and build a two dimensional array with height and width based on their values. Empty 'shelves' would be represented with a '.'
 
-I then wrote a separate init method to accept the width and height as arguments, assign them to their respective instance variables and build a two dimensional array with height and width based on their values.
+- Much of the logic I used for the layout variable was reused from various Tic-Tac-Toe games I'd coded in labs over the past- I noticed the parallel between the two ideas so thought that reviewing the logic there would help me out.
 
-I realised that I could reuse the logic of a lot of Tic-Tac-Toe board
+- This also really helped me in the view command- it gave me certain tricks like reversing my layout 2D array to make sure my co-ordinates were accurate for my coming store, locate and remove commands
 
-# Ideas for improvement
+- It was at this point that I wrote unit tests for the view and init commands, it didn't make sense to write them before I had a clear idea of how I was going to represent a warehouse
 
-Make the init command more robust. It currently only accepts 2 numbers as arguments with a whitespace between, it would be good if it could handle other formats e.g. init(3,2) init[3,2] init 3, 2
+- I wrote specs following similar patterns in the pre-existing tests
+
+### Deliverable 2- Warehouse manager can store crates of product in the warehouse
+
+### Ideas for improvement
+
+Making the init command more robust. It currently only accepts 2 numbers as arguments with a whitespace between, it would be good if it could handle other formats e.g. init(3,2) init[3,2] init 3, 2

@@ -3,7 +3,7 @@ Dir.glob(File.expand_path('commands/*.rb', __dir__)).each { require _1 }
 
 # REPL for warehouse access
 class CommandLineInterface
-  COMMANDS = [Help, Init, Exit, View].freeze
+  COMMANDS = [Help, Init, Exit, View, Store, Locate].freeze
 
   HINT = 'Type `help` for instructions on usage'
   UNRECOGNISED_MESSAGE = "Command not found. #{HINT}".freeze

@@ -7,6 +7,6 @@ class View < Command
 
 
   def execute _args
-    warehouse.layout.reverse.map(&:join).join("\n")
+    warehouse.layout.reverse.map(&:join).join("\n") # reversed to make 0,0 appear at bottom left
   end
 end
